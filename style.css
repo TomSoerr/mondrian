@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --red: rgb(224, 48, 40);
+  --blue: rgb(44, 69, 121);
+  --yellow: rgb(248, 213, 71);
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  gap: 3px;
+  background-color: black;
+  grid:
+    "r01 r01 w05 w07 w10 w13 b01 b01 w17 r03"
+    "w01 w01 w05 w07 w10 r02 b01 b01 y05 y05"
+    "w02 y01 w05 y02 w11 w14 w14 r04 y05 y05"
+    "w03 w03 w05 y02 w11 b02 b02 r04 y05 y05"
+    "w04 w04 w06 w08 r05 b02 b02 r04 y05 y05"
+    "w04 w04 w06 b03 w12 y04 w15 r04 y05 y05"
+    "w04 w04 w06 w09 y03 w16 w16 w16 y05 y05" /
+    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
+}
+
+.background [class^="w"] {
+  background-color: honeydew;
+}
+
+.background [class^="r"] {
+  background-color: var(--red);
+}
+
+.background [class^="b"] {
+  background-color: var(--blue);
+}
+
+.background [class^="y"] {
+  background-color: var(--yellow);
+}
+
+.background div {
+  animation: bounce 2s forwards cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform: translateY(-100vh);
+}
+
+@keyframes bounce {
+  100% {
+    transform: translateX(0);
+  }
+}

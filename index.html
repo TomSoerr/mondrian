@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mondrian</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="r01"></div>
+      <div class="r02"></div>
+      <div class="r03"></div>
+      <div class="r04"></div>
+      <div class="r05"></div>
+      <div class="y01"></div>
+      <div class="y02"></div>
+      <div class="y03"></div>
+      <div class="y04"></div>
+      <div class="y05"></div>
+      <div class="b01"></div>
+      <div class="b02"></div>
+      <div class="b03"></div>
+      <div class="w01"></div>
+      <div class="w02"></div>
+      <div class="w03"></div>
+      <div class="w04"></div>
+      <div class="w05"></div>
+      <div class="w06"></div>
+      <div class="w07"></div>
+      <div class="w08"></div>
+      <div class="w09"></div>
+      <div class="w10"></div>
+      <div class="w11"></div>
+      <div class="w12"></div>
+      <div class="w13"></div>
+      <div class="w14"></div>
+      <div class="w15"></div>
+      <div class="w16"></div>
+      <div class="w17"></div>
+    </div>
+
+    <script>
+      [...document.querySelectorAll(".background div")].forEach((div) => {
+        div.style.gridArea = div.className;
+        div.style.animationDelay = `${Math.random() * 2}s`;
+      });
+    </script>
+  </body>
+</html>
